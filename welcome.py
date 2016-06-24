@@ -19,7 +19,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def Welcome():
-    return app.send_static_file('index.html')
+    print ("in python file");
+	return app.send_static_file('index.html')
 
 @app.route('/myapp')
 def WelcomeToMyapp():
