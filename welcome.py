@@ -19,14 +19,13 @@ app = Flask(__name__)
 
 @app.route('/')
 def Welcome():
-    a=1
 	return app.send_static_file('index.html')
 
 @app.route('/myapp')
 def WelcomeToMyapp():
     return 'Welcome again to my app running on Bluemix!'
 
-#port = os.getenv('PORT', '8000')
+#port = os.getenv('PORT', '8080')
 port = int(os.getenv('VCAP_APP_PORT', '8000'))
 
 if __name__ == "__main__":
