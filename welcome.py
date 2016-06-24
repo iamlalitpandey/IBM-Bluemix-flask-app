@@ -23,7 +23,7 @@ def Welcome():
 
 @app.route('/myapp')
 def WelcomeToMyapp():
-    return 'Welcome again to my app running on Bluemix!'
+    return 'Welcome again to my app running on Bluemix!hmmmmm'
 
 #port = os.getenv('PORT', '8080')
 port = int(os.getenv('VCAP_APP_PORT', '5000'))
