@@ -32,6 +32,8 @@ def WelcomeToMyapp():
 port = int(os.getenv('VCAP_APP_PORT', '5000'))
 
 if __name__ == "__main__":
+	app.run(host='0.0.0.0',port=port)
+	
 	import json
 	from watson_developer_cloud import RetrieveAndRankV1
 
@@ -75,4 +77,4 @@ if __name__ == "__main__":
 		pysolr_client = retrieve_and_rank.get_pysolr_client(solr_cluster_id, 'test-collection')
 		results = pysolr_client.search('what is the basic mechanism of the transonic aileron buzz')
 
-	app.run(host='0.0.0.0',port=port)
+	
