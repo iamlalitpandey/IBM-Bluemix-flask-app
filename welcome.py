@@ -19,8 +19,19 @@ app = Flask(__name__)
 
 @app.route('/')
 def Welcome():
+	print results
 	return 'This is test'
+	#return app.send_static_file('index.html')
+
 	
+@app.route('/myapp')
+def WelcomeToMyapp():
+    return 'Welcome again to my app running on Bluemix!oooooooooooooooooooooonew'
+
+#port = os.getenv('PORT', '8080')
+port = int(os.getenv('VCAP_APP_PORT', '5000'))
+
+if __name__ == "__main__":
 	import json
 	from watson_developer_cloud import RetrieveAndRankV1
 
@@ -63,19 +74,5 @@ def Welcome():
 
 		pysolr_client = retrieve_and_rank.get_pysolr_client(solr_cluster_id, 'test-collection')
 		results = pysolr_client.search('what is the basic mechanism of the transonic aileron buzz')
-		print(results)
-	
-		
-	return 'This is test'
-	#return app.send_static_file('index.html')
 
-	
-@app.route('/myapp')
-def WelcomeToMyapp():
-    return 'Welcome again to my app running on Bluemix!oooooooooooooooooooooonew'
-
-#port = os.getenv('PORT', '8080')
-port = int(os.getenv('VCAP_APP_PORT', '5000'))
-
-if __name__ == "__main__":
 	app.run(host='0.0.0.0',port=port)
