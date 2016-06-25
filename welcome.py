@@ -63,15 +63,8 @@ def Welcome():
 		results = pysolr_client.search('what is the basic mechanism of the transonic aileron buzz')
 		print(results)
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	return results
+		
+	return "This is test "
 	#return app.send_static_file('index.html')
 
 	
