@@ -19,7 +19,6 @@ app = Flask(__name__)
 
 @app.route('/')
 def Welcome():
-	print results
 	return 'This is test'
 	#return app.send_static_file('index.html')
 
