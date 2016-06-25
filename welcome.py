@@ -24,8 +24,8 @@ def Welcome():
 
 
 	retrieve_and_rank = RetrieveAndRankV1(
-		username='5659890e-961a-4ac3-b7e0-1a7bfef394ca',
-		password='bilHBX2gKNFB')
+		username='fd3935a6-48b0-483f-9c38-4fff2aa09472',
+		password='ZuidU7Pg2Pxn')
 
 	# Solr clusters
 
@@ -60,7 +60,7 @@ def Welcome():
 		print(json.dumps(collections, indent=2))
 
 		pysolr_client = retrieve_and_rank.get_pysolr_client(solr_cluster_id, 'test-collection')
-		results = pysolr_client.search('bananas')
+		results = pysolr_client.search('what is the basic mechanism of the transonic aileron buzz')
 		print(results)
 	
 	
