@@ -19,6 +19,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def Welcome():
+	return 'This is test'
+	
 	import json
 	from watson_developer_cloud import RetrieveAndRankV1
 
@@ -64,7 +66,7 @@ def Welcome():
 		print(results)
 	
 		
-	return "This is test "
+	return 'This is test'
 	#return app.send_static_file('index.html')
 
 	
