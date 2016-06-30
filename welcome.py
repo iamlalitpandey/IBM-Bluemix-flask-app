@@ -13,17 +13,17 @@
 # limitations under the License.
 
 #!flask/bin/python
-from app import app
-app.run(debug=True)
+#from app import app
+#app.run(debug=True)
 
-# import os
-# from flask import Flask
+ import os
+ from flask import Flask
 
-# app = Flask(__name__)
+ app = Flask(__name__)
 
-# @app.route('/')
-# def Welcome():
-	# return 'This is test'
+ @app.route('/')
+ def Welcome():
+	 return 'This is test'
 	# #return app.send_static_file('index.html')
 
 	
